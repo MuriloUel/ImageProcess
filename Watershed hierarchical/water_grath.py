@@ -109,15 +109,16 @@ gray = cv.blur(gray,(3,3))
 
 markers = my_wathershed(img= img,gray=gray)
 
+
 graph = []#Starting the graph
 #														  ID         gradient of mosaic image       List of neighbors vertex
 #The graph is a list structured as follow:                 |                    |                             |
 #														   v                    v                             V
-#											[ [(mask_value1,maks_value2),gradient diference],        [ID, ID , ID ... ID]
+#											[ [(mask_value1,maks_value2),gradient diference,        [ID, ID , ID ... ID]
 #											                                     .
 #											                                     .
 #											                                     .
-#											  [(mask_value1,maks_value2),gradient diference],        [ID, ID , ID ... ID] ]
+#											  [(mask_value1,maks_value2),gradient diference,        [ID, ID , ID ... ID] ]
 
 # lines_already_computed = []
 
